@@ -1,5 +1,3 @@
 package file_system
 
-class FileSystemException {
-
-}
+class FileSystemException(msg: String) extends RuntimeException(msg)

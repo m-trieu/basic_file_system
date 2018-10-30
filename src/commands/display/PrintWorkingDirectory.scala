@@ -1,4 +1,6 @@
-package commands
+package commands.display
+
+import commands.Command
 import file_system.State
 
 class PrintWorkingDirectory extends Command {

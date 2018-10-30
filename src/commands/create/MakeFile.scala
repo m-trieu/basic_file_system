@@ -1,10 +1,11 @@
-package commands
-import file_system.State
+package commands.create
 
-class MakeFile extends Command {
-  override def apply(currentState: State): State = {
-    val wd = currentState.wd
-  }
+import file_system.State
+import files.{File, FileSystemEntry}
+
+class MakeFile(name: String) extends CreateEntry(name) {
+  override def createEntry(currentState: State): FileSystemEntry =
+    File.empty(currentState.wd.path, name)
 }
 
 object MakeFile {
